@@ -1,0 +1,1467 @@
+openapi: 3.0.1
+info:
+  title: DINH DUONG ME BAU REST APIs Document
+  # description: NS Checkin system REST API
+  # termsOfService: http://swagger.io/terms/
+  # contact:
+  #   name: Hyperledger Team
+  # license:
+  #   name: Apache 2.0
+  #   url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: http://localhost:1111
+
+paths:
+  #user
+  /api/auth/register:
+    post:
+      tags:
+        - user
+      summary: create user
+      operationId: create user
+      requestBody:
+        description: create user
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "EMAIL": "nguyendinhtri01@gmail.com"
+              "PHONE": "0934848475"
+              "PASSWORD": "A00001"
+              "FULLNAME": "Nguyen Dinh Tri"
+              "ROLE_ID": 1
+              "DOB": "2023-08-05T17:00:00.110Z"
+              "ADDRESS": "166 nguyen luong bang"
+              "STATUS_ID": 1
+              "CITY_ID": 1
+              "DISTRICT_ID": 1
+              "WARD_ID": 1
+              "IS_ADMIN": true
+
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/auth/login:
+    post:
+      tags:
+        - user
+      summary: login user
+      operationId: login user
+      requestBody:
+        description: login user
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "PHONE": "0934848477"
+              "PASSWORD": "tridn123"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/user/getAllUser:
+    get:
+      tags:
+        - user
+      summary: get all user
+      operationId: get all user
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/user/getCountUserByCity:
+    get:
+      tags:
+        - user
+      summary: getCountUserByCity
+      operationId: getCountUserByCity
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/user/getIdUser/{categoryId}:
+    get:
+      tags:
+        - user
+      summary: get user details by user ID
+      operationId: get user details by user ID
+      parameters:
+        - name: categoryId
+          in: path
+          description: Please provide user
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/user/updateUser/{categoryId}:
+    patch:
+      tags:
+        - user
+      summary: update user details by user ID
+      operationId: update user details by user ID
+      parameters:
+        - name: categoryId
+          in: path
+          description: Please provide user
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        description: update workingStatus
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/category"
+            example:
+              "EMAIL": "nguyendinhtri01@gmail.com"
+              "PHONE": "0934848475"
+              "PASSWORD": "A00001"
+              "FULLNAME": "Nguyen Dinh Tri"
+              "ROLE_ID": 1
+              "DOB": "2023-08-05T17:00:00.110Z"
+              "ADDRESS": "166 nguyen luong bang"
+              "STATUS_ID": 1
+              "CITY_ID": 1
+              "DISTRICT_ID": 1
+              "WARD_ID": 1
+              "UPDATED_BY": "19"
+
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/user/deleteUser/{categoryId}:
+    delete:
+      tags:
+        - user
+      summary: delete user by user ID
+      operationId: delete user by user ID
+      parameters:
+        - name: categoryId
+          in: path
+          description: Please provide user
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "UPDATED_BY": "19"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  #mon an
+  /api/monan/createMonAn:
+    post:
+      tags:
+        - monan
+      summary: create monan
+      operationId: create monan
+      requestBody:
+        description: create monan
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "TEN": "Bún riêu cua"
+              "TYPE": 1
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/monan/getAllMonAn:
+    get:
+      tags:
+        - monan
+      summary: get all monan
+      operationId: get all monan
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/monan/getAllByQueryMonAn:
+    post:
+      tags:
+        - monan
+      summary: get all monan by query
+      operationId: get all monan by query
+      requestBody:
+        description: monan by query ,
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/laborContract"
+            example:
+              "CATEGORY_ID": "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/monan/getIdMonAn/{monanId}:
+    get:
+      tags:
+        - monan
+      summary: get monan details by monan ID
+      operationId: get monan details by monan ID
+      parameters:
+        - name: monanId
+          in: path
+          description: Please provide monan
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/monan/updateMonAn/{monanId}:
+    patch:
+      tags:
+        - monan
+      summary: update monan details by monan ID
+      operationId: update monan details by monan ID
+      parameters:
+        - name: monanId
+          in: path
+          description: Please provide monan
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        description: update category
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/category"
+            example:
+              "TEN": "Bún riêu "
+              "TYPE": 2
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/monan/deleteMonAn/{monanId}:
+    delete:
+      tags:
+        - monan
+      summary: delete monan by monan ID
+      operationId: delete monan by monan ID
+      parameters:
+        - name: monanId
+          in: path
+          description: Please provide monan
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/monan/uploadFileMonAn:
+    post:
+      tags:
+        - monan
+      summary: create upload file monan
+      operationId: create upload file monan
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                uploadFile:
+                  type: string
+                  format: binary
+                MONAN_ID:
+                  type: number
+              required:
+                - uploadFile
+                - MONAN_ID
+            example:
+              pdfFile: [binary-data]
+
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  #dinhduong
+  /api/dinhDuong/createDinhDuong:
+    post:
+      tags:
+        - dinhduong
+      summary: create dinhduong
+      operationId: create dinhduong
+      requestBody:
+        description: create dinhduong
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "MONAN_ID": 1
+              "TEN": "Kẽm"
+              "GIATRI": 0.2
+              "DONVI": "mg"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/dinhDuong/getAllDinhDuong:
+    get:
+      tags:
+        - dinhduong
+      summary: get all dinhduongs
+      operationId: get all dinhduongs
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/dinhDuong/getIdDinhDuong/{dinhduongId}:
+    get:
+      tags:
+        - dinhduong
+      summary: get dinhduong details by dinhduong ID
+      operationId: get dinhduong details by dinhduong ID
+      parameters:
+        - name: dinhduongId
+          in: path
+          description: Please provide dinhduongId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/dinhDuong/updateDinhDuong/{dinhduongId}:
+    patch:
+      tags:
+        - dinhduong
+      summary: update dinhduong details by dinhduong ID
+      operationId: update dinhduong details by dinhduong ID
+      parameters:
+        - name: dinhduongId
+          in: path
+          description: Please provide dinhduongId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        description: update dinhduong
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/dinhduong"
+            example:
+              "MONAN_ID": 1
+              "TEN": "Kẽm"
+              "GIATRI": 0.3
+              "DONVI": "mg"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/dinhDuong/deleteDinhDuong/{dinhduongId}:
+    delete:
+      tags:
+        - dinhduong
+      summary: delete dinhduong by dinhduong ID
+      operationId: delete dinhduong by dinhduong ID
+      parameters:
+        - name: dinhduongId
+          in: path
+          description: Please provide dinhduongId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "UPDATED_BY": "19"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  #cong thuc
+  /api/congThuc/createCongThuc:
+    post:
+      tags:
+        - congthuc
+      summary: create congthuc
+      operationId: create congthuc
+      requestBody:
+        description: create congthuc
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "MONAN_ID": 1
+              "TEN": "Cua"
+              "MOTA": "1 ký cua giã nhuyễn"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/congThuc/getAllCongThuc:
+    get:
+      tags:
+        - congthuc
+      summary: get all congthucs
+      operationId: get all congthucs
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/congThuc/getIdCongThuc/{congthucId}:
+    get:
+      tags:
+        - congthuc
+      summary: get congthuc details by congthuc ID
+      operationId: get congthuc details by congthuc ID
+      parameters:
+        - name: congthucId
+          in: path
+          description: Please provide congthucId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/congThuc/updateCongThuc/{congthucId}:
+    patch:
+      tags:
+        - congthuc
+      summary: update congthuc details by congthuc ID
+      operationId: update congthuc details by congthuc ID
+      parameters:
+        - name: congthucId
+          in: path
+          description: Please provide congthucId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        description: update congthuc
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/congthuc"
+            example:
+              "MONAN_ID": 1
+              "TEN": "Cua"
+              "MOTA": "2 ký cua giã nhuyễn"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/congThuc/deleteCongThuc/{congthucId}:
+    delete:
+      tags:
+        - congthuc
+      summary: delete congthuc by congthuc ID
+      operationId: delete congthuc by congthuc ID
+      parameters:
+        - name: congthucId
+          in: path
+          description: Please provide congthucId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "UPDATED_BY": "19"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  #phan loai
+  /api/phanLoai/createPhanLoai:
+    post:
+      tags:
+        - phanLoai
+      summary: create phanLoai
+      operationId: create phanLoai
+      requestBody:
+        description: create phanLoai
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "TEN": "Thừa cân"
+              "MOTA": "Tình trạng thừa cân"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/phanLoai/getAllPhanLoai:
+    get:
+      tags:
+        - phanLoai
+      summary: get all phanLoais
+      operationId: get all phanLoais
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/phanLoai/getIdPhanLoai/{phanLoaiId}:
+    get:
+      tags:
+        - phanLoai
+      summary: get phanLoai details by phanLoai ID
+      operationId: get phanLoai details by phanLoai ID
+      parameters:
+        - name: phanLoaiId
+          in: path
+          description: Please provide phanLoaiId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/phanLoai/updatePhanLoai/{phanLoaiId}:
+    patch:
+      tags:
+        - phanLoai
+      summary: update phanLoai details by phanLoai ID
+      operationId: update phanLoai details by phanLoai ID
+      parameters:
+        - name: phanLoaiId
+          in: path
+          description: Please provide phanLoaiId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        description: update phanLoai
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/phanLoai"
+            example:
+              "TEN": "Thừa cân nặng"
+              "MOTA": "Tình trạng thừa cân nặng"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/phanLoai/deletePhanLoai/{phanLoaiId}:
+    delete:
+      tags:
+        - phanLoai
+      summary: delete phanLoai by phanLoai ID
+      operationId: delete phanLoai by phanLoai ID
+      parameters:
+        - name: phanLoaiId
+          in: path
+          description: Please provide phanLoaiId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "UPDATED_BY": "19"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  #thuc don
+  /api/thucDon/createThucDon:
+    post:
+      tags:
+        - thucDon
+      summary: create thucDon
+      operationId: create thucDon
+      requestBody:
+        description: create thucDon
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "PHANLOAI_ID": 1
+              "TUAN": 1
+              "NGAY": 1
+              "THU": 2
+
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/thucDon/settingThucDon:
+    post:
+      tags:
+        - thucDon
+      summary: setting thucDon
+      operationId: setting thucDon
+      requestBody:
+        description: setting thucDon
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "MONAN_ID": 1
+              "THUCDON_ID": 1
+
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/thucDon/getAllThucDon:
+    get:
+      tags:
+        - thucDon
+      summary: get all thucDons
+      operationId: get all thucDons
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/thucDon/getAllByQueryThucDon:
+    post:
+      tags:
+        - thucDon
+      summary: get all thucDon by query
+      operationId: get all thucDon by query
+      requestBody:
+        description: thucDon by query ,
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/laborContract"
+            example:
+              "TUAN": 1
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/thucDon/getIdThucDon/{thucDonId}:
+    get:
+      tags:
+        - thucDon
+      summary: get thucDon details by thucDon ID
+      operationId: get thucDon details by thucDon ID
+      parameters:
+        - name: thucDonId
+          in: path
+          description: Please provide thucDonId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/thucDon/updateThucDon/{thucDonId}:
+    patch:
+      tags:
+        - thucDon
+      summary: update thucDon details by thucDon ID
+      operationId: update thucDon details by thucDon ID
+      parameters:
+        - name: thucDonId
+          in: path
+          description: Please provide thucDonId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        description: update thucDon
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/thucDon"
+            example:
+              "TEN": "Thừa cân nặng"
+              "MOTA": "Tình trạng thừa cân nặng"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/thucDon/deleteThucDon/{thucDonId}:
+    delete:
+      tags:
+        - thucDon
+      summary: delete thucDon by thucDon ID
+      operationId: delete thucDon by thucDon ID
+      parameters:
+        - name: thucDonId
+          in: path
+          description: Please provide thucDonId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "UPDATED_BY": "19"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  #ket luan khuyen nghi
+  /api/ketLuanKhuyenNghi/createKetLuanKhuyenNghi:
+    post:
+      tags:
+        - ketLuanKhuyenNghi
+      summary: create ketLuanKhuyenNghi
+      operationId: create ketLuanKhuyenNghi
+      requestBody:
+        description: create ketLuanKhuyenNghi
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "PHANLOAI_ID": 1
+              "NHONHAT": 5
+              "LONNHAT": 9
+              "KETLUAN": "Thừa cân"
+              "KHUYENNGHI": "Nên giảm chế độ ăn"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/ketLuanKhuyenNghi/getAllKetLuanKhuyenNghi:
+    get:
+      tags:
+        - ketLuanKhuyenNghi
+      summary: get all ketLuanKhuyenNghis
+      operationId: get all ketLuanKhuyenNghis
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/ketLuanKhuyenNghi/getKetLuanKhuyenNghiByValue:
+    post:
+      tags:
+        - ketLuanKhuyenNghi
+      summary: get ketLuanKhuyenNghi
+      operationId: get ketLuanKhuyenNghi
+      requestBody:
+        description: get ketLuanKhuyenNghi
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "VALUE": 3
+              "KHOANG": 1
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/ketLuanKhuyenNghi/getIdKetLuanKhuyenNghi/{ketLuanKhuyenNghiId}:
+    get:
+      tags:
+        - ketLuanKhuyenNghi
+      summary: get ketLuanKhuyenNghi details by ketLuanKhuyenNghi ID
+      operationId: get ketLuanKhuyenNghi details by ketLuanKhuyenNghi ID
+      parameters:
+        - name: ketLuanKhuyenNghiId
+          in: path
+          description: Please provide ketLuanKhuyenNghiId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+
+  /api/ketLuanKhuyenNghi/updateKetLuanKhuyenNghi/{ketLuanKhuyenNghiId}:
+    patch:
+      tags:
+        - ketLuanKhuyenNghi
+      summary: update ketLuanKhuyenNghi details by ketLuanKhuyenNghi ID
+      operationId: update ketLuanKhuyenNghi details by ketLuanKhuyenNghi ID
+      parameters:
+        - name: ketLuanKhuyenNghiId
+          in: path
+          description: Please provide ketLuanKhuyenNghiId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        description: update ketLuanKhuyenNghi
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ketLuanKhuyenNghi"
+            example:
+              "TEN": "Thừa cân nặng"
+              "MOTA": "Tình trạng thừa cân nặng"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/ketLuanKhuyenNghi/deleteKetLuanKhuyenNghi/{ketLuanKhuyenNghiId}:
+    delete:
+      tags:
+        - ketLuanKhuyenNghi
+      summary: delete ketLuanKhuyenNghi by ketLuanKhuyenNghi ID
+      operationId: delete ketLuanKhuyenNghi by ketLuanKhuyenNghi ID
+      parameters:
+        - name: ketLuanKhuyenNghiId
+          in: path
+          description: Please provide ketLuanKhuyenNghiId
+          required: true
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "UPDATED_BY": "19"
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  #bmi
+  /api/bmi/createBMI:
+    post:
+      tags:
+        - bmi
+      summary: create bmi
+      operationId: create bmi
+      requestBody:
+        description: create bmi
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/leavePolicy"
+            example:
+              "CHIEUCAO": 1.55
+              "CANNANG_1": 50
+              "CANNANG_2": 52
+              "TUAN": 1
+              "NGAY": 1
+              "USER_ID": 2
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/bmi/getBMIByUser/{UserId}:
+    get:
+      tags:
+        - bmi
+      summary: get bmi details by bmi ID
+      operationId: get bmi details by bmi ID
+      parameters:
+        - name: UserId
+          in: path
+          description: Please provide userId
+          required: true
+          schema:
+            type: string
+            example: 2
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+  /api/bmi/getCountBmiByPhanLoai:
+    get:
+      tags:
+        - bmi
+      summary: getCountBmiByPhanLoai
+      operationId: getCountBmiByPhanLoai
+      responses:
+        "200":
+          description: Success
+          content: {}
+        "400":
+          description: Bad Request
+          content: {}
+        "401":
+          description: UnAuthorized
+          content: {}
+        "404":
+          description: Not found
+          content: {}
+      security:
+        - JWT: []
+components:
+  schemas:
+  securitySchemes:
+    JWT:
+      type: apiKey
+      in: header
+      name: Authorization

@@ -1,0 +1,12 @@
+{
+  "name": "API_DATN",
+  "script": "dist/api-datn",
+  "watch": true,
+  "ignore_watch": [
+    "node_modules",
+    "swagger",
+    "dist",
+    "logs"
+  ],
+  "log": "logs/log.txt"
+}
