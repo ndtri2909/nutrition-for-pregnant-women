@@ -1,0 +1,214 @@
+.recommend-wrapper {
+  .choose-menu-bank {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 34px -6px rgba(0, 0, 0, 0.1);
+    .choose-menu-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #eee;
+      padding: 30px 10px;
+      .title {
+        color: #6cae3a;
+      }
+      p {
+        text-align: center;
+        margin-top: 10px;
+        width: 90%;
+      }
+    }
+    .choose-menu-right {
+      padding: 30px 30px 50px 30px;
+      &__title {
+        text-align: center;
+        padding: 0px 30px;
+        margin-bottom: 20px;
+      }
+      .form-select {
+        padding: 0px 10px;
+        p {
+          text-transform: uppercase;
+          font-weight: 700;
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+        .select-date {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .select-item {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  //
+  .result-recommend-container {
+    .one-nutritional {
+      margin-bottom: 40px;
+      width: 100%;
+      border: 1px solid #e7e7e7;
+      border-radius: 10px;
+      background-color: white;
+      padding: 20px 10px;
+      .one-nutritional-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        &__number {
+          width: 20px;
+          border-radius: 50%;
+          padding: 20px;
+          font-weight: 700;
+          font-size: 30px;
+          background-color: #e0582a;
+          color: white;
+          margin: 20px;
+        }
+        &__right {
+          h4 {
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .tbl-health-info {
+        margin-bottom: 20px;
+        .tbl-info-header {
+          display: flex;
+          background-color: #d5e0ee;
+          border: 1px solid #e7e7e7;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          div {
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding: 12px 0px;
+          }
+          .div-1 {
+            width: 50%;
+          }
+          .div-2,
+          .div-3 {
+            width: 25%;
+          }
+        }
+        .tbl-info-1 {
+          .ant-table-thead > tr > th {
+            background-color: #f7f5f5 !important;
+            text-align: left !important;
+            padding: 10px 16px !important;
+            font-weight: bolder;
+            text-transform: none;
+          }
+          .ant-table-wrapper
+            .ant-table-container
+            table
+            > thead
+            > tr:first-child
+            > *:last-child {
+            border-start-end-radius: 0px !important;
+          }
+        }
+      }
+
+      .btn-info-food {
+        .tbl-info-header {
+          display: flex;
+          background-color: #e0582a;
+          div {
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding: 12px 0px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .tbl-info-content {
+          display: flex;
+          table,
+          th,
+          td {
+            border: 1px solid #e7e7e7;
+            border-collapse: collapse;
+          }
+          table {
+            width: 100%;
+          }
+          .div-1,
+          .div-2,
+          .div-3 {
+            padding: 10px;
+          }
+          .div-2 {
+            text-align: center;
+          }
+          .food-img {
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          .info-food {
+            padding: 15px;
+            h4 {
+              text-transform: uppercase;
+              font-weight: 600;
+              font-size: 15px;
+              text-align: center;
+              margin-bottom: 10px;
+            }
+          }
+        }
+        .div-1 {
+          width: 60%;
+        }
+        .div-2 {
+          width: 12%;
+        }
+        .div-3 {
+          width: 28%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .recommend-wrapper {
+    .choose-menu-bank {
+      .choose-menu-right {
+        padding: 30px 10px;
+        .form-select {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .bmi-footer {
+    .bmi-footer-note {
+      margin: 20px 0px !important;
+      p {
+        width: 90% !important;
+      }
+    }
+    .bmi-btn-group {
+      flex-direction: column;
+    }
+  }
+  .result-recommend-container {
+    .one-nutritional {
+      padding: 20px 0px !important;
+    }
+  }
+}

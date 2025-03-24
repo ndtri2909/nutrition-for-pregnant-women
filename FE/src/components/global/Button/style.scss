@@ -1,0 +1,27 @@
+.btn-check-health {
+  margin: 1.5rem 10px;
+  display: flex;
+  justify-content: center;
+  .btn-check {
+    background-color: #e0582a;
+    color: white;
+    min-height: 50px;
+    font-weight: 700;
+    padding: 0px 50px;
+    text-transform: uppercase;
+    &:hover {
+      color: white !important;
+      background-color: #db4716 !important;
+      border-color: #e0582a !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .btn-check-health {
+    margin: 10px;
+    .btn-check {
+      padding: 0px 20px;
+    }
+  }
+}

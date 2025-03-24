@@ -1,0 +1,38 @@
+.headerbar-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  .headbar-search {
+    display: flex;
+  }
+  .hearbar-category {
+    display: flex;
+    align-items: center;
+  }
+  .select-mobile {
+    display: none;
+  }
+  .select-pc {
+    display: block;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .headerbar-container {
+    flex-direction: column;
+  }
+  .headbar-search {
+    margin-bottom: 10px;
+  }
+  .hearbar-category {
+    justify-content: space-between;
+  }
+  .select-mobile {
+    display: unset !important;
+  }
+  .select-pc {
+    display: none !important;
+    margin-right: 0px;
+  }
+}

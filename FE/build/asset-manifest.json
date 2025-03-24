@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f786bbdf.css",
+    "main.js": "/static/js/main.bb7e6cbe.js",
+    "static/media/introduce.png": "/static/media/introduce.15de561e5c84c59cfe65.png",
+    "static/media/thapdinhduong.jpg": "/static/media/thapdinhduong.2a01228a4d02fe3cc618.jpg",
+    "static/media/banner3.png": "/static/media/banner3.1f5b4874b98978ef89d3.png",
+    "static/media/DINHDUONG.png": "/static/media/DINHDUONG.5f844d114684bbc20375.png",
+    "index.html": "/index.html",
+    "main.f786bbdf.css.map": "/static/css/main.f786bbdf.css.map",
+    "main.bb7e6cbe.js.map": "/static/js/main.bb7e6cbe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f786bbdf.css",
+    "static/js/main.bb7e6cbe.js"
+  ]
+}

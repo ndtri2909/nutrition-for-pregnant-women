@@ -1,0 +1,188 @@
+@import "./overrides.css";
+
+:root {
+  --warning                    : #fbc02d;
+  --danger                     : #d32f2f;
+  --success                    : #388e3c;
+  --info                       : #0288d1;
+  --backgound-color-thead-table: rgb(5, 26, 90);
+  --text-color-thead-table     : white;
+}
+
+body {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+/* scrollbars */
+/* ::-webkit-scrollbar {
+  width: 4px;
+}
+.ant-table::-webkit-scrollbar {
+  height: 1.5vh;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border: 4px solid transparent;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+table thead,
+table thead tr,
+table thead tr th {
+  background-color: var(--backgound-color-thead-table) !important;
+  color           : var(--text-color-thead-table) !important;
+}
+
+.image-full {
+  width          : 60%;
+  height         : 60%;
+  object-fit     : cover;
+  object-position: center;
+}
+
+.login-form {
+  max-width: 400px;
+  margin   : 0 auto !important;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+/* Button */
+.btn {
+  font-weight     : 500 !important;
+  font-size       : 12px !important;
+  padding         : 5px 24px !important;
+  border-radius   : 6px !important;
+  color           : white !important;
+  text-transform  : uppercase;
+  background-color: #333;
+}
+
+.btn-warning {
+  background-color: var(--warning) !important;
+  border-color    : var(--warning) !important;
+}
+
+.btn-danger {
+  background-color: var(--danger) !important;
+  border-color    : var(--danger) !important;
+}
+
+.btn-success {
+  background-color: var(--success) !important;
+  border-color    : var(--success) !important;
+}
+
+.btn-info {
+  background-color: var(--info) !important;
+  border-color    : var(--info) !important;
+}
+
+/* -------------- */
+.table-response .ant-table {
+  overflow: auto;
+}
+
+.comment-description {
+  max-width         : 100%;
+  overflow          : hidden;
+  display           : -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-title {
+    display: none;
+  }
+}
+
+.text-clamp {
+  display           : -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow          : hidden;
+  text-overflow     : ellipsis;
+  width             : 100%;
+  max-width         : 100%;
+  white-space       : pre-wrap;
+  word-break        : break-word;
+}
+
+
+/* profile */
+
+.profile-left {
+  width     : 25% !important;
+  text-align: center;
+}
+
+.profile-right {
+  width: 75% !important;
+}
+
+.page-content {
+  padding: 12px !important;
+}
+
+@media only screen and (max-width: 765px) {
+  .page-content {
+    padding: 4px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-left {
+    width        : 100% !important;
+    text-align   : center;
+    margin-bottom: 15px;
+  }
+
+  .profile-right {
+    width: 100% !important;
+  }
+}
+
+.sidebar .sidebar-body .nav .nav-item .nav-link .link-title {
+  white-space: normal;
+}
+
+.sidebar .sidebar-body .nav {
+  padding: 15px 12px 50px 15px;
+}
+
+/* Fabcebook */
+
+.kep-login-facebook {
+  font-weight   : 500 !important;
+  width         : 100%;
+  padding       : 7px !important;
+  text-transform: none !important;
+}
+
+.button_gg {
+  width          : 100%;
+  justify-content: center;
+}
+
+.page-breadcrumb {
+  margin-bottom: 10px !important;
+}

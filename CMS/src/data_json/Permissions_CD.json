@@ -1,0 +1,13 @@
+{
+  "create": "create",
+  "read": "read",
+  "update": "update",
+  "delete": "delete",
+  "download": "download",
+  "upload": "upload",
+  "show_roles": "show_roles",
+  "assign_permission": "assign_permission",
+  "all_data": "all_user_data",
+  "confirm": "confirm",
+  "approve": "approve"
+}

@@ -1,0 +1,241 @@
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  .header-container {
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    border-bottom: 2px solid #f5f2f2;
+    padding: 0px 30px;
+    .header-img {
+      cursor: pointer;
+      width: 220px;
+    }
+  }
+}
+
+.ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.btn-menu-mobile {
+  display: none;
+  width: 140px;
+  margin-left: 10px;
+  .btn-menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid #adadad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+// navright
+.user-group {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  .header-search {
+    border: 1px solid #e3282c;
+    border-radius: 50%;
+    padding: 8px;
+    .icon-search {
+      font-size: 24px;
+      color: #e3282c;
+    }
+    &:hover {
+      background-color: #e3282c;
+      .icon-search {
+        color: white;
+      }
+    }
+  }
+
+  .login-register {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 19px;
+      padding-left: 6px;
+    }
+    &:hover {
+      span {
+        color: #e3282c;
+      }
+    }
+  }
+}
+.navigation {
+  // width: 0%;
+  display: flex;
+  justify-content: center;
+  .ant-menu-overflow-item {
+    text-align: center;
+  }
+
+  .navigtion-container {
+    display: flex;
+    .menu-active {
+      color: #e3282c;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      max-width: 180px;
+      padding: 0px 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      &:hover {
+        color: #e3282c;
+      }
+    }
+  }
+}
+
+.ant-badge .ant-badge-count {
+  transform: translate(65%, -55%);
+}
+.ant-badge .ant-badge-count-sm {
+  min-width: 16px;
+  height: 15px;
+}
+
+// menu header style
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item {
+  span {
+    a {
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+}
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover {
+  &::after {
+    border-bottom-color: #e3282c !important;
+  }
+  span {
+    a {
+      color: #e3282c;
+    }
+  }
+}
+.ant-menu-item-selected {
+  span {
+    a {
+      color: #e3282c !important;
+    }
+  }
+  &::after {
+    border-bottom-color: #e3282c !important;
+  }
+}
+
+/* drawer */
+.ant-drawer {
+  z-index: 2 !important;
+  top: 72px;
+  .ant-drawer-mask {
+    width: 100%;
+    background-color: unset;
+  }
+  .ant-drawer-content-wrapper {
+    width: 100%;
+    height: 100vh !important;
+  }
+  .ant-drawer-content {
+    background: unset !important;
+    width: 100%;
+    .ant-drawer-body {
+      width: 100%;
+    }
+  }
+}
+.ant-drawer .ant-drawer-mask {
+  background: rgba(0, 0, 0, 0.9);
+}
+.item-drawer {
+  color: white;
+  margin-bottom: 34px;
+  font-size: 20px;
+  transition: all linear 0.3s;
+  .nav-link {
+    color: white;
+    span {
+      font-weight: 500;
+    }
+  }
+  .active {
+    color: #e3282c;
+  }
+  &:hover {
+    color: #e3282c;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-wrapper {
+    .header-container {
+      padding: 0px 10px;
+    }
+  }
+  .user-group {
+    .login-register {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .user-group {
+    width: 140px;
+  }
+  .btn-menu-mobile {
+    display: unset;
+  }
+  .menu-pc {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-wrapper {
+    .header-container {
+      height: 80px;
+      padding: 0px 4px !important;
+      .header-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .user-group {
+        .login-register {
+          .text-login {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .btn-menu-mobile {
+    width: 70px;
+  }
+  .user-group {
+    width: 70px;
+  }
+}

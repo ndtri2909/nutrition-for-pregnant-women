@@ -1,0 +1,507 @@
+.header_search .ant-form-item {
+    margin-bottom: 0px;
+}
+
+.card .card-body {
+    padding: 12px 12px 0px 12px;
+}
+
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    content     : "" !important;
+    margin-right: 0px !important;
+}
+
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display    : inline-block;
+    margin-left: 6px;
+    color      : #ff4d4f;
+    font-size  : 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content    : '*' !important;
+}
+
+.ant-form-item-label>label::after {
+    content: '' !important;
+}
+
+.btn-reload {
+    background-color: #FBC02D !important;
+    border          : none !important
+}
+
+.ant-table-tbody>tr>td,
+.ant-table-thead>tr>th {
+    padding: 4px 6px !important;
+}
+
+/* .ant-table-tbody tr:first-child {
+    display: none;
+} */
+.ant-modal-header {
+    padding: 12px 14px !important;
+}
+
+.ant-modal-body {
+    padding: 16px 20px 12px 20px !important;
+}
+
+/* .modal-customer .ant-modal-body {
+    padding-left : 40px !important;
+    padding-right: 40px !important;
+} */
+
+.sidebar .sidebar-body .nav .nav-item .nav-link .link-title {
+    margin-left: 14px !important;
+}
+
+.ant-avatar {
+    overflow: unset !important;
+}
+
+.search-form .ant-form-item {
+    margin-bottom: 8px;
+}
+
+.search-form .ant-form-item .ant-form-item-label {
+    padding-bottom: 0px;
+}
+
+.modal-form .ant-form-item {
+    margin-bottom: 8px;
+}
+
+.modal-form .ant-form-item .ant-form-item-label {
+    padding-bottom: 6px;
+}
+
+/* style for timeline comment sale tracking */
+.time-line {
+    padding-top     : 20px;
+    max-height      : 700px;
+    /* overflow-y   : scroll; */
+    margin-bottom   : 10px;
+}
+
+/* pc */
+.time-line .lists-pc .ant-timeline-item-label {
+    width: calc(35% - 12px) !important;
+}
+
+.time-line .lists-pc .ant-timeline-item-content {
+    left : calc(35% - 4px) !important;
+    width: calc(65% - 14px) !important;
+}
+
+.time-line .lists-pc .ant-timeline-item-tail {
+    left: 35% !important;
+}
+
+.time-line .lists-pc .ant-timeline-item-head-blue {
+    left: 35% !important;
+}
+
+.time-line .lists-pc .ant-timeline {
+    width: 97%;
+}
+
+/* mobile */
+.time-line .lists-mobile .ant-timeline-item-tail {
+    left: 8px !important;
+}
+
+.time-line .lists-mobile .ant-timeline-item-head-blue {
+    left: 4px !important;
+}
+
+.time-line .lists-mobile .ant-timeline-item-content {
+    left: -6px !important;
+}
+
+.time-line .lists-mobile .ant-timeline-item {
+    padding-bottom: 8px;
+}
+
+/* end */
+
+
+/* css for menu antd  */
+.menu-group .ant-menu-inline,
+.menu-group .ant-empty {
+    width: 18em;
+}
+
+.menu-group .ant-empty {
+    margin: 0px;
+}
+
+.menu-group .ant-menu-item {
+    padding-left: 28px !important;
+}
+
+.menu-group .ant-avatar>img {
+    border-radius: 50%;
+}
+
+.sibar-wrapp .btn-create {
+    width          : 80px;
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    margin-top     : 40px;
+}
+
+.btn-create .ant-empty-img-default {
+    width      : 50px;
+    margin-left: 15px;
+}
+
+.main-wrapper .page-wrapper {
+    margin-left: 0px;
+    width      : calc(100% - 18em);
+    margin-left: 18em;
+}
+
+.navbar {
+    width: calc(100% - 18em);
+    left : unset;
+}
+
+.sibar-wrapp .page-wrapper,
+.sibar-wrapp .navbar {
+    width      : calc(100% - 80px);
+    margin-left: 80px;
+}
+
+.menu-group {
+    height          : 100%;
+    position        : fixed;
+    left            : 0;
+    top             : 0;
+    z-index         : 40;
+    background-color: white;
+    /* display      : block; */
+}
+
+.menu-group .menu {
+    overflow-y: scroll !important;
+    height    : 80%;
+}
+
+/* style sidebar */
+
+/* style page content */
+.card .card-body {
+    padding: 10px !important;
+}
+
+
+/*style table antd */
+.ant-table-tbody>tr>td,
+.ant-table-thead>tr>th {
+    padding: 2px 6px !important;
+}
+
+.ant-spin-container {
+    top: 15px;
+}
+
+/* style for table assign-permission */
+.ant-table-row-expand-icon-cell span {
+    margin-left: -100px !important;
+}
+
+.ant-table-expanded-row-fixed {
+    overflow     : unset !important;
+    margin-bottom: 6px !important;
+}
+
+/* search form */
+.search-form .ant-form-item {
+    margin-bottom: 8px !important;
+}
+
+.search-form .ant-form-item .ant-form-item-label {
+    padding-bottom: 0px;
+}
+
+/*  */
+.menu-group-mobile {
+    position: fixed;
+    z-index : 1000;
+    height  : 100%;
+    width   : 18em;
+    overflow: scroll;
+}
+
+/*  */
+.toggle-mobile {
+    display    : none;
+    width      : 50px;
+    text-align : center;
+    margin-left: 10px;
+}
+
+.header_search .ant-form-item-label {
+    padding-bottom: 2px !important;
+}
+
+.layout-pc {
+    display: block;
+}
+
+.layout-mobile {
+    display: none;
+}
+
+.lists-pc {
+    display: block;
+}
+
+.lists-mobile {
+    display: none;
+}
+
+.time-line .scroll-y {
+    overflow-y : scroll;
+    max-height : 600px;
+    padding-top: 10px;
+}
+
+/* style for last-child table */
+.table-moble table .ant-table-thead tr th:nth-last-child(1) {
+    width: 70px !important;
+}
+
+.table-moble .ant-table .ant-table-expanded-row-fixed {
+    padding-left: 0px;
+}
+
+.display-none {
+    display: none;
+}
+
+.salary-input .ant-input-number-input {
+    text-align: right !important;
+}
+
+.salary-input .ant-input-number-handler-wrap {
+    display: none;
+}
+
+/*  */
+.viewmore-btn {
+    color          : #1890ff;
+    cursor         : pointer;
+    display        : flex;
+    justify-content: end;
+    align-items    : center;
+    width          : 100%;
+}
+
+.ant-back-top {
+    right : 30px !important;
+    bottom: 25px !important;
+}
+
+/* back to top */
+.btn-backToTop {
+    height          : 32px;
+    width           : 32px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    border-radius   : 10px;
+    background-color: #63b2f3;
+    color           : white;
+}
+
+/* style menu mobile drawer */
+.menu-mobile-drawer .ant-drawer-content-wrapper {
+    width: 280px !important;
+}
+
+.menu-mobile-drawer .ant-drawer-content-wrapper .ant-drawer-header {
+    padding: 8px;
+}
+
+.menu-mobile-drawer .ant-drawer-content-wrapper .ant-drawer-wrapper-body .ant-drawer-body {
+    padding: 12px 0px;
+}
+
+.search-drawer>.ant-drawer-content-wrapper>.ant-drawer-wrapper-body {
+    background-color: #fff !important;
+}
+
+.search-drawer .ant-drawer-content-wrapper .ant-drawer-wrapper-body .ant-drawer-body {
+    padding: 10px 16px;
+}
+
+.search-drawer .ant-drawer-content-wrapper .ant-drawer-wrapper-body .ant-drawer-footer {
+    display        : flex;
+    justify-content: space-around;
+}
+
+.search-drawer .ant-drawer-content-wrapper {
+    width: 320px !important;
+}
+
+/*  */
+.ant-select-dropdown-placement-bottomLeft {
+    width: unset !important;
+}
+
+.list-label {
+    display              : grid;
+    grid-template-columns: 180px 180px 180px 180px;
+    column-gap           : 10px;
+    row-gap              : 10px;
+    padding              : 20px;
+}
+
+.card-label {
+    border    : 1px solid #adadad;
+    width     : 180px;
+    min-height: 90px;
+    font-size : 8px;
+    padding   : 3px;
+}
+
+.bard-code svg {
+    height: 35px;
+    width : 160px;
+}
+
+.modal-qr .ant-modal-body video {
+    width : unset !important;
+    height: unset !important;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    /* css for menu antd  */
+    .menu-group {
+        display: none;
+    }
+
+    .menu-group .ant-menu-inline {
+        width: 0;
+    }
+
+    .main-wrapper .page-wrapper {
+        margin-left: 0px;
+        width      : 100%;
+        margin-left: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        left : unset;
+    }
+
+    .sibar-wrapp .page-wrapper,
+    .sibar-wrapp .navbar {
+        width      : 100%;
+        margin-left: 0;
+    }
+
+    .toggle-mobile {
+        display: block;
+    }
+
+    .layout-pc {
+        display: none;
+    }
+
+    .layout-mobile {
+        display: block;
+    }
+
+    /* style for last-child table */
+    .table-moble table .ant-table-thead tr th:nth-last-child(1) {
+        width  : 25px !important;
+        padding: 2px 0px !important;
+    }
+
+    .table-moble table .ant-table-tbody tr td:nth-last-child(1) {
+        padding: 2px 0px !important;
+    }
+
+    /* style page content */
+    .card .card-body {
+        padding: 10px 2px !important;
+    }
+
+    .lists-mobile .card .card-body {
+        padding: 4px 0px !important;
+    }
+
+    .info-customer .card .card-body {
+        padding: 6px !important;
+    }
+
+    /* style sidebar */
+}
+
+@media only screen and (max-width: 576px) {}
+
+/* style for upload image customer */
+/* tile uploaded pictures */
+.upload-list-inline .ant-upload-list-item {
+    float       : left;
+    width       : 250px;
+    margin-right: 8px;
+}
+
+.upload-list-inline [class*='-upload-list-rtl'] .ant-upload-list-item {
+    float: right;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /*  */
+    .responsive-mobile {
+        display: none;
+    }
+
+    .modal-form .ant-form-item-label {
+        padding-bottom: 0px !important;
+    }
+
+    .modal-form .ant-form-item {
+        margin-bottom: 2px !important;
+    }
+
+    .modal-customer .ant-modal-body {
+        padding-left : 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .lists-pc {
+        display: none;
+    }
+
+    .lists-mobile {
+        display: block;
+    }
+
+    .modal-mobile .ant-modal-body {
+        padding: 8px 4px !important;
+    }
+
+    .modal-mobile .ant-modal-header {
+        padding: 10px 4px !important;
+
+    }
+
+    /* style block change pagination */
+    .ant-pagination-options {
+        display: inline-block !important;
+
+    }
+
+    .ant-back-top {
+        right : 12px !important;
+        bottom: 8px !important;
+    }
+}

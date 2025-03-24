@@ -1,0 +1,246 @@
+.contact-wrapper1 {
+  .choose-menu-bank {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 34px -6px rgba(0, 0, 0, 0.1);
+    .choose-menu-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #eee;
+      padding: 30px 10px;
+      .title {
+        color: #6cae3a;
+      }
+      p {
+        text-align: center;
+        margin-top: 10px;
+        width: 90%;
+      }
+    }
+    .choose-menu-right {
+      padding: 30px 0px 30px 10px;
+      .form-select {
+        padding: 0px 10px;
+        .form-select-row {
+          margin-bottom: 20px;
+        }
+        p {
+          text-transform: uppercase;
+          font-weight: 700;
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+        .select-date {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+        .form-select-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &__input {
+            width: 75%;
+          }
+          &__unit {
+            width: 20%;
+          }
+        }
+      }
+      .error-massage {
+        color: #e0582a;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//
+.result-bmi {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .result-bmi-index {
+    padding: 20px 30px 100px 20px;
+    background-color: white;
+    li,
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .line-bmi {
+      display: flex;
+      width: 100%;
+      border-radius: 30px;
+      overflow: hidden;
+      margin-top: 50px;
+      .check-bmi-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+    .chart-line-bmi {
+      width: 100%;
+      height: 55vh;
+      margin-top: 30px;
+      .g2-tooltip {
+        border: 1px solid #e0582a;
+      }
+      .g2-tooltip-title {
+        margin-top: 0px !important;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      .g2-tooltip-list {
+        display: none;
+      }
+    }
+    .bmi-region-group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: 1.5em;
+      margin-top: 1em;
+      .bmi-region-color {
+        display: flex;
+        width: 95%;
+        .three-month {
+          display: flex;
+          justify-content: center;
+          font-size: 14px;
+          padding: 10px 0px;
+        }
+        .three-month-start {
+          width: 28.8%;
+          background-color: #eff7e4;
+        }
+        .three-month-center {
+          width: 30%;
+          background-color: #c7dffa;
+        }
+        .three-month-end {
+          width: 41.2%;
+          background-color: #f9e2da;
+        }
+      }
+    }
+    .week-pregnancy {
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+      margin-top: 12px;
+    }
+  }
+  .result-bmi-comment {
+    background-color: #f7fbf7;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    h4 {
+      text-align: center;
+      padding: 20px;
+    }
+    .resulte-recommend {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        text-align: center;
+      }
+      ul {
+        li {
+          margin-bottom: 5px;
+        }
+      }
+      .fontBold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  //
+}
+.bmi-footer {
+  .bmi-footer-note {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0px;
+    p {
+      width: 65%;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  .bmi-btn-group {
+    display: flex;
+    justify-content: center;
+  }
+}
+.mama-info {
+  color: #e0582a;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-wrapper1 {
+    .bmi-footer {
+      .bmi-btn-group {
+        flex-direction: column;
+      }
+    }
+  }
+  .choose-menu-left {
+    padding: 10px !important;
+  }
+  .select-date {
+    justify-content: unset !important;
+    .select-date-first {
+      margin-right: 20px;
+    }
+  }
+  .result-bmi {
+    .result-bmi-index {
+      padding: 20px 10px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-wrapper1 {
+    .bmi-footer {
+      .bmi-footer-note {
+        margin: 20px 0px;
+        p {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .contact-wrapper1 {
+    .bmi-footer {
+      .bmi-footer-note {
+        p {
+          width: 96%;
+        }
+      }
+    }
+  }
+}

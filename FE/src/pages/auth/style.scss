@@ -1,0 +1,55 @@
+.btn-submit {
+  background-color: #e3282c;
+  border: none;
+  color: white;
+  width: 40%;
+  font-size: 16px;
+  font-weight: 700;
+  &:hover {
+    background-color: #c32124 !important;
+    color: white !important;
+  }
+}
+
+.note-login {
+  margin-bottom: 10px;
+  p {
+    color: #e3282c;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+    &:hover {
+      color: #a81c1e;
+    }
+  }
+}
+
+.form-login-register {
+  padding: 25px;
+  border-radius: 10px;
+  background-color: white;
+  .login-register-img {
+    padding: 0px 15px;
+  }
+  .login-resiger-form {
+    padding: 0px 15px;
+  }
+  .login-btn-group {
+    display: flex;
+    .btn-group-1 {
+      border: 1px solid #eee;
+      border-radius: 6px;
+      width: 50%;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+      font-weight: 700;
+      color: #333;
+      cursor: pointer;
+    }
+    .tabs-active {
+      background-color: #e3282c;
+      color: white;
+    }
+  }
+}
